@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today’s Three</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app" aria-labelledby="app-title">
+    <section class="card">
+      <header class="intro">
+        <p class="eyebrow">Daily focus</p>
+        <h1 id="app-title">Today’s Three</h1>
+        <p class="description">Choose three priorities for today, then check each one off as you complete it.</p>
+      </header>
+
+      <form class="priority-list" aria-label="Today’s priorities">
+        <div class="priority-item">
+          <input type="checkbox" id="priority-1-done" class="priority-check" aria-label="Mark priority 1 complete">
+          <label for="priority-1-text" class="visually-hidden">Priority 1</label>
+          <input type="text" id="priority-1-text" class="priority-text" autocomplete="off" aria-describedby="progress-message">
+        </div>
+
+        <div class="priority-item">
+          <input type="checkbox" id="priority-2-done" class="priority-check" aria-label="Mark priority 2 complete">
+          <label for="priority-2-text" class="visually-hidden">Priority 2</label>
+          <input type="text" id="priority-2-text" class="priority-text" autocomplete="off" aria-describedby="progress-message">
+        </div>
+
+        <div class="priority-item">
+          <input type="checkbox" id="priority-3-done" class="priority-check" aria-label="Mark priority 3 complete">
+          <label for="priority-3-text" class="visually-hidden">Priority 3</label>
+          <input type="text" id="priority-3-text" class="priority-text" autocomplete="off" aria-describedby="progress-message">
+        </div>
+      </form>
+
+      <div class="footer-actions">
+        <p id="progress-message" class="progress" aria-live="polite">0 of 3 complete.</p>
+        <button type="button" id="start-fresh" class="button">Start Fresh</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
